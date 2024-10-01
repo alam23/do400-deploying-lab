@@ -1,11 +1,11 @@
 pipeline{
     agent{
-        label "maven"
+        node { label "maven" }
     }
     stages{
-        stage('Prepare') {
+        stage("Prepare") {
             steps {
-                sh 'chmod +x mvnw'
+                sh "chmod +x mvnw"
             }
         }
         stage("Tests"){
